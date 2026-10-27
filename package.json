@@ -1,0 +1,50 @@
+{
+  "name": "pi-goat",
+  "version": "0.1.0",
+  "description": "Pinned, locally maintained Pi extensions: rewind, stash, multi-file editing and web research.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-extension"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "multi-edit/*.ts",
+    "rewind/*.ts",
+    "stash/*.ts",
+    "web-search/index.ts",
+    "web-search/src/*.ts",
+    "README.md",
+    "VENDORED.md",
+    "LICENSE",
+    "LICENSES/"
+  ],
+  "scripts": {
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@mozilla/readability": "0.6.0",
+    "linkedom": "0.18.13"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@sinclair/typebox": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    },
+    "@sinclair/typebox": {
+      "optional": true
+    }
+  }
+}
